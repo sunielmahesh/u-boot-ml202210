@@ -54,6 +54,7 @@ static char *get_reset_cause(void)
 	switch (get_imx_reset_cause()) {
 	case 0x00001:
 	case 0x00011:
+		printf("%s: reset cause: POR\n", __func__);
 		return "POR";
 	case 0x00004:
 		return "CSU";
@@ -63,6 +64,7 @@ static char *get_reset_cause(void)
 #ifdef	CONFIG_MX7
 		return "WDOG1";
 #else
+		printf("%s: reset cause: WDOG\n", __func__);
 		return "WDOG";
 #endif
 	case 0x00020:
