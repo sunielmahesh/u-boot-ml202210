@@ -68,6 +68,8 @@ ifneq (,$(filter $(SOC), imx8ulp imx9))
 obj-y				+= mmc.o
 endif
 
+obj-y                           += mmc.o
+
 obj-$(CONFIG_LS102XA_STREAM_ID)	+= ls102xa_stream_id.o
 
 obj-$(CONFIG_EMC2305)              += emc2305.o

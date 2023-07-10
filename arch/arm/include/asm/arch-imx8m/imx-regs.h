@@ -50,6 +50,10 @@
 #ifdef CONFIG_IMX8MM
 #define USDHC3_BASE_ADDR	0x30B60000
 #endif
+#define USB1_BASE_ADDR         0x38100000
+#define USB2_BASE_ADDR         0x38200000
+#define USB1_PHY_BASE_ADDR     0x381F0000
+#define USB2_PHY_BASE_ADDR     0x382F0000
 #define UART_BASE_ADDR(n)	(			\
 	!!sizeof(struct {				\
 		static_assert((n) >= 1 && (n) <= 4);	\
